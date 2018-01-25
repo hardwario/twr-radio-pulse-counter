@@ -86,12 +86,6 @@ void application_task(void *param)
 
     bc_radio_pub_uint32("pulse-counter/a/count", &channel_count_a);
 
-    uint32_t channel_event_count_b;
-
-    channel_event_count_b = app.button_channel_b_count;
-
-    bc_radio_pub_uint32("push-button/b/event_count", &channel_event_count_b);
-
     bc_scheduler_plan_current_relative(REPORT_INTERVAL);
 }
 
