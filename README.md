@@ -17,9 +17,9 @@ The optical sensor is connected to channel A on the sensor module. The number of
 
 The following hardware components are used for this project:
 
-* **[Sensor Module](https://shop.bigclown.com/products/sensor-module)**
-* **[Core Module](https://shop.bigclown.com/products/core-module)**
-* **[Mini Battery Module](https://shop.bigclown.com/products/mini-battery-module)**
+* **[Sensor Module](https://shop.bigclown.com/sensor-module)**
+* **[Core Module](https://shop.bigclown.com/core-module)**
+* **[Mini Battery Module](https://shop.bigclown.com/mini-battery-module)**
 
 ## License
 
