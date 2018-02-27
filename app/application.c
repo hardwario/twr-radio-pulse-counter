@@ -71,7 +71,7 @@ void application_init(void)
 
     bc_scheduler_plan_relative(0, 3000);
 
-    bc_radio_pairing_request("wireless-pulse-counter", "v1.1.0");
+    bc_radio_pairing_request("wireless-pulse-counter", VERSION);
 
     bc_led_pulse(&app.led, 2000);
 }
