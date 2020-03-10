@@ -1,11 +1,11 @@
-<a href="https://www.bigclown.com/"><img src="https://bigclown.sirv.com/logo.png" width="200" alt="BigClown Logo" align="right"></a>
+<a href="https://www.hardwario.com/"><img src="https://www.hardwario.com/ci/assets/hw-logo.svg" width="200" alt="HARDWARIO Logo" align="right"></a>
 
-# Firmware for BigClown Wireless Pulse Counter
+# Firmware for HARDWARIO Wireless Pulse Counter
 
 [![Travis](https://img.shields.io/travis/bigclownlabs/bcf-wireless-pulse-counter/master.svg)](https://travis-ci.org/bigclownlabs/bcf-wireless-pulse-counter)
 [![Release](https://img.shields.io/github/release/bigclownlabs/bcf-wireless-pulse-counter.svg)](https://github.com/bigclownlabs/bcf-wireless-pulse-counter/releases)
 [![License](https://img.shields.io/github/license/bigclownlabs/bcf-wireless-pulse-counter.svg)](https://github.com/bigclownlabs/bcf-wireless-pulse-counter/blob/master/LICENSE)
-[![Twitter](https://img.shields.io/twitter/follow/BigClownLabs.svg?style=social&label=Follow)](https://twitter.com/BigClownLabs)
+[![Twitter](https://img.shields.io/twitter/follow/hardwario_en.svg?style=social&label=Follow)](https://twitter.com/hardwario_en)
 
 This repository contains firmware for wireless pulse counter project.
 
