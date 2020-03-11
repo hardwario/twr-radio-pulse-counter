@@ -60,7 +60,7 @@ void application_init(void)
     bc_tag_temperature_set_event_handler(&app.temperature_tag, temperature_tag_event_handler, &temperature_event_param);
 
     // Initialize battery
-    bc_module_battery_init(BC_MODULE_BATTERY_FORMAT_MINI);
+    bc_module_battery_init();
     bc_module_battery_set_event_handler(battery_event_handler, NULL);
     bc_module_battery_set_update_interval(BATTERY_UPDATE_INTERVAL);
 
@@ -100,16 +100,20 @@ void pulse_counter_event_handler(bc_module_sensor_channel_t channel, bc_pulse_co
     }
 }
 
+// This function dispatches battery events
 void battery_event_handler(bc_module_battery_event_t event, void *event_param)
 {
-    (void) event;
-    (void) event_param;
-
-    float voltage;
-
-    if (bc_module_battery_get_voltage(&voltage))
+    // Update event?
+    if (event == BC_MODULE_BATTERY_EVENT_UPDATE)
     {
-        bc_radio_pub_battery(&voltage);
+        float voltage;
+
+        // Read battery voltage
+        if (bc_module_battery_get_voltage(&voltage))
+        {
+            // Publish battery voltage
+            bc_radio_pub_battery(&voltage);
+        }
     }
 }
 
