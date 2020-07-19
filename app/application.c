@@ -2,7 +2,6 @@
 
 #define REPORT_INTERVAL (5 * 60 * 1000)
 #define REPORT_INTERVAL_INITIAL (1 * 60 * 1000)
-
 #define BATTERY_UPDATE_INTERVAL (60 * 60 * 1000)
 
 #define TEMPERATURE_PUB_NO_CHANGE_INTEVAL (15 * 60 * 1000)
@@ -71,7 +70,7 @@ void application_init(void)
 
     bc_scheduler_plan_relative(0, 3000);
 
-    bc_radio_pairing_request("wireless-pulse-counter", VERSION);
+    bc_radio_pairing_request("radio-pulse-counter", VERSION);
 
     bc_led_pulse(&app.led, 2000);
 }
@@ -94,7 +93,11 @@ void pulse_counter_event_handler(bc_module_sensor_channel_t channel, bc_pulse_co
     (void) channel;
     (void) event_param;
 
-    if (event == BC_PULSE_COUNTER_EVENT_OVERFLOW)
+    if (event == BC_PULSE_COUNTER_EVENT_UPDATE)
+    {
+        bc_led_pulse(&app.led, 20);
+    }
+    else if (event == BC_PULSE_COUNTER_EVENT_OVERFLOW)
     {
         // TODO
     }
@@ -122,7 +125,7 @@ void button_event_handler(bc_button_t *self, bc_button_event_t event, void *even
     (void) self;
     (void) event_param;
 
-    if (event == BC_BUTTON_EVENT_PRESS)
+    if (event == BC_BUTTON_EVENT_CLICK)
     {
         bc_led_pulse(&app.led, 100);
 
@@ -131,6 +134,10 @@ void button_event_handler(bc_button_t *self, bc_button_event_t event, void *even
         event_count++;
 
         bc_radio_pub_push_button(&event_count);
+    }
+    else if (event == BC_BUTTON_EVENT_HOLD)
+    {
+        bc_scheduler_plan_now(0);
     }
 }
 
