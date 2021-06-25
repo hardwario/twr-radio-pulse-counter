@@ -2,8 +2,7 @@
 
 # Firmware for HARDWARIO Wireless Pulse Counter
 
-[![Travis](https://img.shields.io/travis/bigclownlabs/bcf-wireless-pulse-counter/master.svg)](https://travis-ci.org/bigclownlabs/bcf-wireless-pulse-counter)
-[![Release](https://img.shields.io/github/release/bigclownlabs/bcf-wireless-pulse-counter.svg)](https://github.com/bigclownlabs/bcf-wireless-pulse-counter/releases)
+[![Travis](https://www.travis-ci.com/hardwario/twr-radio-pulse-counter.svg?branch=master)](https://www.travis-ci.com/hardwario/twr-radio-pulse-counter)[![Release](https://img.shields.io/github/release/bigclownlabs/bcf-wireless-pulse-counter.svg)](https://github.com/bigclownlabs/bcf-wireless-pulse-counter/releases)
 [![License](https://img.shields.io/github/license/bigclownlabs/bcf-wireless-pulse-counter.svg)](https://github.com/bigclownlabs/bcf-wireless-pulse-counter/blob/master/LICENSE)
 [![Twitter](https://img.shields.io/twitter/follow/hardwario_en.svg?style=social&label=Follow)](https://twitter.com/hardwario_en)
 
