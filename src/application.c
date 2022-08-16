@@ -70,7 +70,7 @@ void application_init(void)
 
     twr_scheduler_plan_relative(0, 3000);
 
-    twr_radio_pairing_request("radio-pulse-counter", VERSION);
+    twr_radio_pairing_request("radio-pulse-counter", FW_VERSION);
 
     twr_led_pulse(&app.led, 2000);
 }
